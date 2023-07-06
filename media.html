@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment3</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .nav {
+            background-color: rgb(186, 186, 186);
+            height: 50px;
+            width: 100%;
+            box-shadow: rgba(110, 110, 233, 0.25) 0px 13px 27px -5px, rgba(148, 94, 94, 0.3) 0px 8px 16px -8px;
+        }
+
+        label.logo {
+            color: white;
+            background-color: rgb(8, 82, 184);
+            font-size: 20px;
+            line-height: 35px;
+            padding: 20px;
+            font-weight: bold;
+            margin-left: 40px;
+            text-align: center;
+        }
+
+        .nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        .nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        .nav ul li a {
+            color: black;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        .body {
+            height: calc(100vh - 80px);
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .left {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 700px;
+            height: 600px;
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .right {
+            display: grid;
+            grid-template-columns: 250px 250px;
+            grid-auto-rows: 300px;
+            /* margin-right:70px; */
+            font-size: 15px;
+            ;
+            margin-left: 200px;
+            margin-top: 18px;
+        }
+
+        .one {
+            text-align: center;
+            margin-right: 2px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        .two {
+            text-align: center;
+            margin-left: 2px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        .three {
+            text-align: center;
+            margin-right: 2px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        .four {
+            text-align: center;
+            margin-left: 2px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        .right img {
+            height: 200px;
+            width: 200px;
+            border-radius: 0%;
+            display: flex;
+            padding: 20px 20px 20px 55px;
+        }
+        @media (max-width: 767px) {
+            .checkbtn {
+                display: block;
+            }
+
+            ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            .nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            .nav ul li a {
+                font-size: 20px;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+
+            .body {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                font-size: 10px;
+            }
+
+            .left {
+                width: 400px;
+                margin-left: 220px;
+                margin-top: 40px;
+            }
+
+            .nav {
+                margin-left: 10px;
+            }
+
+            .right img {
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                display: flex;
+                padding: 20px 20px 20px 55px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">WorldNomads</label>
+        <ul>
+            <li><a class="active" href="https://www.worldnomads.com/create/scholarships/film"
+                    style="color:blue;">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </div>
+    <div class="body">
+        <div class="left">
+            <p>
+                 <b style="color:rgb(100, 66, 160)">Welcome To Travel Film Making<br><br></b>
+                <b>An Online Travel Filmmaking Platform<br><br></b>
+                <b>Introduction to Travel Filmmaking:-</b>
+                The power of storytelling and emotional connection with the audience.
+                Choosing the right equipment: From smartphones to DSLRs, learning about camera gear and accessories
+                suitable for travel filmmaking on a budget.
+                <br><b>Research and story development:-</b> How to plan your travel film narrative, identifying key
+                elements,
+                and structuring your story arc.
+                Location scouting and shot lists: Tips for finding the best filming locations and organizing shot
+                ideas to make the most of your time on the road.
+                <br><b>Capturing Cinematic Footage:-</b>
+                Learning to shoot cinematic sequences, utilizing different frame
+                rates, shutter speeds, and exposure settings.
+                Filming B-roll and establishing shots: Elevating your storytelling with supplemental footage to set
+                the scene and immerse the audience.
+                <br><b>The Art of Interviewing:-</b>Techniques to put subjects at ease and elicit compelling stories
+                fromlocals and fellow travelers.
+                Recording high-quality audio: Choosing the right microphone and capturing clear, crisp sound in
+                various environments.
+                <br><b>Editing and Post-production:-</b>
+                Editing software essentials: Introduction to popular video editing software and techniques for
+                crafting a coherent and visually captivating travel film.
+                Adding music and sound effects: Utilizing audio to enhance the emotional impact of your travel
+                film.<br>
+                <iframe src="https://www.youtube.com/embed/B2SKiPKlb3Q" alt="Referance Video"></iframe><br>
+            </p>
+        </div>
+        <div class="right">
+            <div class="one">
+                <img src="https://media.worldnomads.com/_Profiles/36c12633/6c531f26/documentary-filmmaking-guide-thumb-new.jpg?v=637164784500000000"
+                    alt="img1">
+                <b>High Content Quality and Famous Creater</b><br>
+                We provide best cinematic photo grapher and video grapher and Graphic designer like Ankit Bhatiya,Sam
+                Newton and Alban Endlos.
+            </div>
+            <div class="two">
+                <img src="https://www.desktop-documentaries.com/images/gear-on-table-1200px.jpeg" alt="img3">
+                <b>Awesome gear</b><br>
+                Practical, hands-on experience is highly important for every one so we give you gear's to practices.
+            </div>
+            <div class="three">
+                <img src="https://media.istockphoto.com/id/582265994/fr/vectoriel/world-travel-russie-%C3%A9tats-unis-japon-france-angleterre-italie.jpg?s=1024x1024&w=is&k=20&c=enYi1IGCPaQ_iMn_EYYz4STQj9E9ID1GlG5aUTaPfJw="
+                    alt="">
+                <b>Free flights And Hottels</b><br>
+                At the time of Assignment we give free flights,Hottel and all travel expences and life Insurance.
+            </div>
+            <div class="four">
+                <img src="https://arunzcreation.in/wp-content/uploads/2022/04/Certification-in-Videography.png" alt="">
+                <b>Shareable Certificate</b><br>
+                We provide Shareable Certificate which are valide and Channel's like Travel XP,History TV,Trvl Tv are
+                also consider our Certificate.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
